@@ -4,6 +4,7 @@ import com.boshko.lesson6.hw6.task1.*;
 import com.boshko.lesson6.hw6.task2.*;
 import com.boshko.lesson6.hw6.task3.Truck;
 import com.boshko.lesson6.hw6.task4.B;
+import com.boshko.lesson6.hw6.task5.Person;
 import com.boshko.lesson6.hw6.task5.User;
 
 public class Main {
@@ -35,10 +36,9 @@ public class Main {
 
         //5.-------------------------------------------
 
+        Person person = new Person();
+        person.getInfo();
         User user = new User();
-        System.out.println(user.getAge());
-        System.out.println(user.getName());
-
+        user.getInfo();
     }
-
 }
