@@ -33,16 +33,14 @@ public class MainClass {
 
     //3. Метод производит слияние двух файлов в один
 
-    public static void mergeTwoFiles(File file1, File file2) throws FileNotFoundException {
-        File f = new File("files/task3.txt");
+    public static void mergeTwoFiles(File file1, File file2, File file3) throws FileNotFoundException {
         List<String> list1 = readFile(file1);
         List<String> list2 = readFile(file2);
         list1.addAll(list2);
 
         for (String o : list1) {
-            writeToFile(f, o);
+            writeToFile(file3, o);
         }
-
     }
 
     //4. Метод заменяет все символы кроме букв и цифр в файле на знак $
@@ -103,7 +101,7 @@ public class MainClass {
         //3.========================================================
 
         try {
-            mergeTwoFiles(new File("files/task1.txt"), new File("files/task2.txt"));
+            mergeTwoFiles(new File("files/task1.txt"), new File("files/task2.txt"), new File("files/task3.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
